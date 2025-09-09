@@ -128,8 +128,8 @@ def return_results(warmup_iterations, bench_iterations)
   }
 
   # Collect JIT stats before loading any additional code.
-  yjit_stats = RubyVM::YJIT.runtime_stats if defined?(RubyVM::YJIT) && RubyVM::YJIT.enabled?
-  zjit_stats = RubyVM::ZJIT.stats if defined?(RubyVM::ZJIT) && RubyVM::ZJIT.enabled?
+  yjit_stats = RubyVM::YJIT.runtime_stats if defined?(RubyVM::YJIT.enabled?) && RubyVM::YJIT.enabled?
+  zjit_stats = RubyVM::ZJIT.stats if defined?(RubyVM::ZJIT.enabled?) && RubyVM::ZJIT.enabled?
 
   # Collect our own peak mem usage as soon as reasonable after finishing the last iteration.
   rss = get_rss
