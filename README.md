@@ -20,7 +20,7 @@ graphed in any spreadsheet editor.
 
 Clone this repository:
 ```
-git clone https://github.com/Shopify/yjit-bench.git yjit-bench
+git clone https://github.com/ruby/yjit-bench.git yjit-bench
 ```
 
 ### Benchmarking YJIT
