@@ -168,6 +168,7 @@ def return_results(warmup_iterations, bench_iterations)
 
     stats_pads = stats_keys.map(&:size).max + 1
     stats_keys.each do |key|
+      next unless jit_stats.key?(key)
       case key
       when /_time_ns\z/
         key_name = key.to_s.sub(/_time_ns\z/, '_time')
