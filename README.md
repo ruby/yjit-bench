@@ -1,8 +1,7 @@
-yjit-bench
+ruby-bench
 ==========
 
-Small set of benchmarks and scripts for the YJIT Ruby JIT compiler project, which lives in
-the [Shopify/yjit](https://github.com/Shopify/yjit) repository.
+Small set of benchmarks and scripts for the Ruby programming language.
 
 The benchmarks are found in the `benchmarks` directory. Individual Ruby files
 in `benchmarks` are microbenchmarks. Subdirectories under `benchmarks` are
@@ -20,12 +19,12 @@ graphed in any spreadsheet editor.
 
 Clone this repository:
 ```
-git clone https://github.com/ruby/yjit-bench.git yjit-bench
+git clone https://github.com/ruby/ruby-bench
 ```
 
 ### Benchmarking YJIT
 
-yjit-bench supports benchmarking any Ruby implementation. But if you want to benchmark YJIT,
+ruby-bench supports benchmarking any Ruby implementation. But if you want to benchmark YJIT,
 follow [these instructions](https://github.com/ruby/ruby/blob/master/doc/yjit/yjit.md#building-yjit)
 to build and install YJIT.
 
@@ -40,7 +39,7 @@ chruby ruby-yjit
 
 To run all the benchmarks and record the data:
 ```
-cd yjit-bench
+cd ruby-bench
 ./run_benchmarks.rb
 ```
 
@@ -104,7 +103,7 @@ ruby benchmarks/some_benchmark.rb
 
 ## Ruby options
 
-By default, yjit-bench benchmarks the Ruby used for `run_benchmarks.rb`.
+By default, ruby-bench benchmarks the Ruby used for `run_benchmarks.rb`.
 If the Ruby has `--yjit` option, it compares two Ruby commands, `-e "interp::ruby"` and `-e "yjit::ruby --yjit`.
 However, if you specify `-e` yourself, you can override what Ruby is benchmarked.
 

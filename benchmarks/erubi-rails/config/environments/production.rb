@@ -90,7 +90,7 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
-  # yjit-bench configurations
+  # ruby-bench configurations
   # If we want to benchmark with YJIT then it has already been enabled by command line arguments.
   # If we are benchmarking CRuby without YJIT don't enable it even if this build has it.
   config.yjit = false
