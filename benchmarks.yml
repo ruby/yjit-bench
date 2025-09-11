@@ -25,9 +25,6 @@ liquid-render:
 lobsters:
   desc: test a wide variety of routes in the Lobste.rs Rails app
   category: headline
-shipit:
-  desc: test a wide variety of routes, both HTML and JSON API in the shipit Rails app
-  category: headline
 mail:
   desc: mail tests the Mail gem by repeatedly creating an email from a text file and converting it to a string for sending.
   category: headline
@@ -46,12 +43,17 @@ ruby-lsp:
 sequel:
   desc: sequel repeatedly queries entries in a SQLite table with highly-random names.
   category: headline
+shipit:
+  desc: test a wide variety of routes, both HTML and JSON API in the shipit Rails app
+  category: headline
 
 #
 # Other Benchmarks
 #
 binarytrees:
   desc: binarytrees from the Computer Language Benchmarks Game.
+blurhash:
+  desc: blurhash (blurred preview image) calculation
 erubi:
   desc: erubi compiles a simple Erb template into a method with erubi, then times evaluating that method.
 etanni:
@@ -66,10 +68,18 @@ graphql-native:
   desc: GraphQL gem parsing a large file, but using a native parser
 lee:
   desc: lee is a circuit-board layout solver, deployed in a plausibly reality-like way
+matmul:
+  desc: matrix multiplication benchmark
 nbody:
   desc: nbody from the Computer Language Benchmarks Game.
+nqueens:
+  desc: solver for the N-Queens problem
 optcarrot:
   desc: optcarrot is a functional headless NES emulator, run on a specific game cartridge for a specific number of frames.
+protoboeuf:
+  desc: protoboeuf (pure-Ruby protobuf) message decoding
+protoboeuf-encode:
+  desc: protoboeuf (pure-Ruby protobuf) message encoding
 rack:
   desc: test the performance of the Rack framework with barely any routing.
 ruby-json:
@@ -78,20 +88,10 @@ rubyboy:
   desc: Rubyboy is a functional headless GameBoy emulator, run on a specific game cartridge for a specific number of frames.
 rubykon:
   desc: Ruby solver for Go (the boardgame.) Runs many iterations forward from an initial starting board.
-tinygql:
-  desc: TinyGQL gem parsing a large file in pure Ruby
-nqueens:
-  desc: solver for the N-Queens problem
 sudoku:
   desc: sudoku solver
-matmul:
-  desc: matrix multiplication benchmark
-blurhash:
-  desc: blurhash (blurred preview image) calculation
-protoboeuf:
-  desc: protoboeuf (pure-Ruby protobuf) message decoding
-protoboeuf-encode:
-  desc: protoboeuf (pure-Ruby protobuf) message encoding
+tinygql:
+  desc: TinyGQL gem parsing a large file in pure Ruby
 
 #
 # MicroBenchmarks
@@ -102,6 +102,10 @@ protoboeuf-encode:
   single_file: true
 30k_methods:
   desc: 30k_methods tests thousands of nested method calls that mostly just call out to other single-call methods.
+  category: micro
+  single_file: true
+attr_accessor:
+  desc: attr_accessor tests the performance of getting instance variable values via an attr_accessor imemo.
   category: micro
   single_file: true
 cfunc_itself:
@@ -116,20 +120,24 @@ getivar:
   desc: getivar tests the performance of getting instance variable values.
   category: micro
   single_file: true
-attr_accessor:
-  desc: attr_accessor tests the performance of getting instance variable values via an attr_accessor imemo.
-  category: micro
-  single_file: true
 keyword_args:
   desc: keyword_args tests the performance of method calls with keyword arguments.
+  category: micro
+  single_file: true
+loops-times:
+  desc: nested loop Integer#times and array access microbenchmark
+  category: micro
+  single_file: true
+object-new:
+  desc: instantiate a new object in a loop to test allocation performance
   category: micro
   single_file: true
 respond_to:
   desc: respond_to tests the performance of the respond_to? method.
   category: micro
   single_file: true
-object-new:
-  desc: instantiate a new object in a loop to test allocation performance
+ruby-xor:
+  desc: pure-Ruby string XOR microbenchmark, analogous to xorcist C extension.
   category: micro
   single_file: true
 setivar:
@@ -150,13 +158,5 @@ str_concat:
   single_file: true
 throw:
   desc: microbenchmark for the throw instruction and stack unwinding.
-  category: micro
-  single_file: true
-ruby-xor:
-  desc: pure-Ruby string XOR microbenchmark, analogous to xorcist C extension.
-  category: micro
-  single_file: true
-loops-times:
-  desc: nested loop Integer#times and array access microbenchmark
   category: micro
   single_file: true
