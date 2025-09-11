@@ -1,17 +1,17 @@
 We'd love your contributions! Folks have contributed new benchmarks, new test harnesses
-and more. I'm sure there's more you'd like to see in yjit-bench.
+and more. I'm sure there's more you'd like to see in ruby-bench.
 
 If you have questions or problems getting set up, you're probably not the only
-one with difficulties. You can [file an issue](https://github.com/ruby/yjit-bench/issues)
+one with difficulties. You can [file an issue](https://github.com/ruby/ruby-bench/issues)
 and we'll answer as soon as we can.
 
-We welcome [GitHub Pull Requests](https://github.com/ruby/yjit-bench/pulls) in
+We welcome [GitHub Pull Requests](https://github.com/ruby/ruby-bench/pulls) in
 the usual way, though you'll need to sign a Shopify
 Contributor License Agreement - when you file the PR a bot should direct you through
 the process.
 
 If you're looking for something to do, the
-[issue tracker](https://github.com/ruby/yjit-bench/issues)
+[issue tracker](https://github.com/ruby/ruby-bench/issues)
 can also be helpful.
 
 Right now documentation is mostly in the benchmark files and in the README.

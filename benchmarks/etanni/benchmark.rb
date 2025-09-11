@@ -2,7 +2,7 @@ require_relative '../../harness/loader'
 Dir.chdir __dir__
 
 # This is an Etanni translation of the Erb template in the Erubi
-# yjit-bench benchmark.
+# ruby-bench benchmark.
 TEMPLATE_FILE = "simple_template.etanni"
 
 require "json"
