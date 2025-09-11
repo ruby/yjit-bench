@@ -150,7 +150,7 @@ def return_results(warmup_iterations, bench_iterations)
       :compile_time_ns,
     ].uniq
     puts "YJIT stats:"
-  elsif zjit_stats && !RubyVM::ZJIT.stats_enabled?
+  elsif zjit_stats && defined?(RubyVM::ZJIT.stats_enabled?) && !RubyVM::ZJIT.stats_enabled?
     yjit_bench_results["zjit_stats"] = zjit_stats
     stats_keys = [
       *ENV.fetch("ZJIT_BENCH_STATS", "").split(",").map(&:to_sym),
